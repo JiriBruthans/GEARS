@@ -7,7 +7,7 @@ import torch.optim as optim
 import torch.nn as nn
 from torch.optim.lr_scheduler import StepLR
 
-from GERS.model import GEARS_Model
+from GEARS.model import GEARS_Model
 from GEARS.inference import evaluate, compute_metrics, deeper_analysis, \
                   non_dropout_analysis
 from GEARS.utils import loss_fct, uncertainty_loss_fct, parse_any_pert, \
