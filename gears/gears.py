@@ -79,6 +79,7 @@ class GEARS:
         self.set2conditions = pert_data.set2conditions
         self.subgroup = pert_data.subgroup
         self.gene_list = pert_data.gene_names.values.tolist()
+        self.pert_list = pert_data.pert_names.tolist()
         self.num_genes = len(self.gene_list)
         self.num_perts = len(self.pert_list)
         self.default_pert_graph = pert_data.default_pert_graph
@@ -91,8 +92,8 @@ class GEARS:
         print_sys('pert_list:', self.pert_list)
         print_sys('=======================================================')
         print_sys('=======================================================')
+
         
-        self.pert_list = pert_data.pert_names.tolist()
         
         self.ctrl_expression = torch.tensor(
             np.mean(self.adata.X[self.adata.obs.condition == 'ctrl'],
@@ -483,9 +484,7 @@ class GEARS:
         if save_file:
             plt.savefig(save_file, bbox_inches='tight')
         plt.show()
-    
-    print_sys("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSYSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSssssss")
-    print('NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOONNNNNNNNNNNEEEEEEEEEEE')
+
     def train(self, epochs = 20, 
               lr = 1e-3,
               weight_decay = 5e-4
