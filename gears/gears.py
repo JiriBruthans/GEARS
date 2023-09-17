@@ -479,7 +479,8 @@ class GEARS:
             plt.savefig(save_file, bbox_inches='tight')
         plt.show()
     
-    
+    print_sys("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSYSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSssssss")
+    print('NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNOOOOOOOOOOOOOOOONNNNNNNNNNNEEEEEEEEEEE')
     def train(self, epochs = 20, 
               lr = 1e-3,
               weight_decay = 5e-4
