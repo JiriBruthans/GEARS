@@ -19,6 +19,9 @@ torch.manual_seed(0)
 
 import warnings
 warnings.filterwarnings("ignore")
+class printik:
+    def __init__():
+        print('HEJHOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa')
 
 class GEARS:
 
