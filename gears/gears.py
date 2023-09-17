@@ -22,7 +22,6 @@ warnings.filterwarnings("ignore")
 class printik:
     def __init__():
         print('HEJHOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa')
-
 class GEARS:
 
     """
