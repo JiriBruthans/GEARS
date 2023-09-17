@@ -33,12 +33,6 @@ class GEARS:
                  weight_bias_track = False, 
                  proj_name = 'GEARS', 
                  exp_name = 'GEARS'):
-        print_sys('=======================================================')
-        print_sys('=======================================================')
-        print_sys('gene_list:', self.gene_list)
-        print_sys('pert_list:', self.pert_list)
-        print_sys('=======================================================')
-        print_sys('=======================================================')
         """
         Initialize GEARS model
 
@@ -85,12 +79,20 @@ class GEARS:
         self.set2conditions = pert_data.set2conditions
         self.subgroup = pert_data.subgroup
         self.gene_list = pert_data.gene_names.values.tolist()
-        self.pert_list = pert_data.pert_names.tolist()
         self.num_genes = len(self.gene_list)
         self.num_perts = len(self.pert_list)
         self.default_pert_graph = pert_data.default_pert_graph
         self.saved_pred = {}
         self.saved_logvar_sum = {}
+
+        print_sys('=======================================================')
+        print_sys('=======================================================')
+        print_sys('gene_list:', self.gene_list)
+        print_sys('pert_list:', self.pert_list)
+        print_sys('=======================================================')
+        print_sys('=======================================================')
+        
+        self.pert_list = pert_data.pert_names.tolist()
         
         self.ctrl_expression = torch.tensor(
             np.mean(self.adata.X[self.adata.obs.condition == 'ctrl'],
