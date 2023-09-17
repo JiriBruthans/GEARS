@@ -82,12 +82,12 @@ class GEARS:
         self.pert_list = pert_data.pert_names.tolist()
         self.num_genes = len(self.gene_list)
         self.num_perts = len(self.pert_list)
-        print_sys('=======================================================')
-        print_sys('=======================================================')
-        print_sys('gene_list:', self.gene_list)
-        print_sys('pert_list:', self.pert_list)
-        print_sys('=======================================================')
-        print_sys('=======================================================')
+        print('=======================================================')
+        print('=======================================================')
+        print('gene_list:', self.gene_list)
+        print('pert_list:', self.pert_list)
+        print('=======================================================')
+        print('=======================================================')
         self.default_pert_graph = pert_data.default_pert_graph
         self.saved_pred = {}
         self.saved_logvar_sum = {}
