@@ -21,6 +21,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 class GEARS:
+
     """
     GEARS base model class
     """
@@ -30,6 +31,12 @@ class GEARS:
                  weight_bias_track = False, 
                  proj_name = 'GEARS', 
                  exp_name = 'GEARS'):
+        print_sys('=======================================================')
+        print_sys('=======================================================')
+        print_sys('gene_list:', self.gene_list)
+        print_sys('pert_list:', self.pert_list)
+        print_sys('=======================================================')
+        print_sys('=======================================================')
         """
         Initialize GEARS model
 
@@ -77,12 +84,6 @@ class GEARS:
         self.subgroup = pert_data.subgroup
         self.gene_list = pert_data.gene_names.values.tolist()
         self.pert_list = pert_data.pert_names.tolist()
-        print_sys('=======================================================')
-        print_sys('=======================================================')
-        print_sys('gene_list:', self.gene_list)
-        print_sys('pert_list:', self.pert_list)
-        print_sys('=======================================================')
-        print_sys('=======================================================')
         self.num_genes = len(self.gene_list)
         self.num_perts = len(self.pert_list)
         self.default_pert_graph = pert_data.default_pert_graph
