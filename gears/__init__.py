@@ -1,4 +1,5 @@
 from .gears import GEARS
 from .pertdata import PertData
-from .gears import printik
+
 print('HEJHOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa')
+from .gears import printik
