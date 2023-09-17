@@ -84,8 +84,8 @@ class GEARS:
         self.num_perts = len(self.pert_list)
         print('=======================================================')
         print('=======================================================')
-        print('gene_list : ', len(gene_list))
-        print('pert_list:', len(pert_list))
+        print('gene_list : ', len(self.gene_list))
+        print('pert_list:', len(self.pert_list))
         print('=======================================================')
         print('=======================================================')
         self.default_pert_graph = pert_data.default_pert_graph
