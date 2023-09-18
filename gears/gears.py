@@ -88,7 +88,17 @@ class GEARS:
         print('pert_list:', len(self.pert_list))
         print('=======================================================')
         print('=======================================================')
-        self.default_pert_graph = pert_data.default_pert_graph
+        # Open a file in write mode ('w') and write the list to it
+	with open('gene_file.txt', 'w') as f:
+    		for item in gene_list:
+        		f.write(f"{item}\n")
+ 	with open('pert_file.txt', 'w') as f:
+                for item in pert_list:
+                        f.write(f"{item}\n")
+	from google.colab import files
+	files.download('gene_file.txt')
+	files.download('pert_file.txt')	
+	self.default_pert_graph = pert_data.default_pert_graph
         self.saved_pred = {}
         self.saved_logvar_sum = {}
 
