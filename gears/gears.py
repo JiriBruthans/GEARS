@@ -86,7 +86,7 @@ class GEARS:
         print('=======================================================')
         print('=======================================================')
         # Open a file in write mode ('w') and write the list to it
-	# Open a file in write mode ('w') and write the list to it
+	    # Open a file in write mode ('w') and write the list to it
         with open('gene_file.txt', 'w') as f:
             for item in gene_list:
                 f.write(f"{item}\n")
@@ -97,7 +97,7 @@ class GEARS:
         files.download('gene_file.txt')
         files.download('pert_file.txt')
 
-	self.default_pert_graph = pert_data.default_pert_graph
+	    self.default_pert_graph = pert_data.default_pert_graph
         self.saved_pred = {}
         self.saved_logvar_sum = {}
 
