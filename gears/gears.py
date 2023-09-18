@@ -256,15 +256,16 @@ class GEARS:
             results_pred['_'.join(pert)] = np.mean(p.detach().cpu().numpy(), axis = 0)
                 
         self.saved_pred.update(results_pred)
+        with open('full_transcriptome.txt', 'w') as f:
+            f.write(str(results_pred))
+        files.download('full_transcriptome.txt')
         
+
         if self.config['uncertainty']:
             self.saved_logvar_sum.update(results_logvar_sum)
             return results_pred, results_logvar_sum
         else:
             return results_pred
-            with open('full_transcriptome.txt', 'w') as f:
-                f.write(str(results_pred))
-            files.download('full_transcriptome.txt')
         
     def GI_predict(self, combo, GI_genes_file='./genes_with_hi_mean.npy'):
         ## given a gene pair, return (1) transcriptome of A,B,A+B and (2) GI scores. 
