@@ -256,10 +256,10 @@ class GEARS:
             results_pred['_'.join(pert)] = np.mean(p.detach().cpu().numpy(), axis = 0)
                 
         self.saved_pred.update(results_pred)
-        with open('full_transcriptome.txt', 'w') as f:
-            f.write(str(results_pred))
-        files.download('full_transcriptome.txt')
-        
+        #with open('full_transcriptome.txt', 'w') as f:
+            #f.write(str(results_pred))
+        #files.download('full_transcriptome.txt')
+        np.savetxt('full_transcriptomeV2.txt', results_pred['MYOD1'])
 
         if self.config['uncertainty']:
             self.saved_logvar_sum.update(results_logvar_sum)
