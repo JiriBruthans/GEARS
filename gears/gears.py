@@ -88,10 +88,10 @@ class GEARS:
         # Open a file in write mode ('w') and write the list to it
 	    # Open a file in write mode ('w') and write the list to it
         with open('gene_file.txt', 'w') as f:
-            for item in gene_list:
+            for item in self.gene_list:
                 f.write(f"{item}\n")
         with open('pert_file.txt', 'w') as f:
-            for item in pert_list:
+            for item in self.pert_list:
                 f.write(f"{item}\n")
         from google.colab import files
         files.download('gene_file.txt')
