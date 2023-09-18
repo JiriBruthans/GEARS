@@ -1,3 +1,4 @@
+from google.colab import files 
 from copy import deepcopy
 import argparse
 from time import time
@@ -261,6 +262,9 @@ class GEARS:
             return results_pred, results_logvar_sum
         else:
             return results_pred
+            with open('full_transcriptome.txt', 'w') as f:
+                f.write(str(results_pred))
+            files.download('full_transcriptome.txt')
         
     def GI_predict(self, combo, GI_genes_file='./genes_with_hi_mean.npy'):
         ## given a gene pair, return (1) transcriptome of A,B,A+B and (2) GI scores. 
