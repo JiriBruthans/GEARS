@@ -262,6 +262,8 @@ class GEARS:
         np.savetxt('full_transcriptomeV2.txt', list(results_pred.values())[0])
         print('Type of results_pred:', type(results_pred))
         print('Type of value of results_pred:', type(list(results_pred.values())[0]))
+        print('lenght of numpy array', len(list(results_pred.values())[0]))
+        print('sum of all elements in the results array:', np.sum(list(results_pred.values())[0]))
         #tot_exp = 0
         #for e in list(results_pred.values())[0]:
             #tot_exp = tot_exp + 
