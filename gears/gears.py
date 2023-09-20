@@ -259,7 +259,7 @@ class GEARS:
         #with open('full_transcriptome.txt', 'w') as f:
             #f.write(str(results_pred))
         #files.download('full_transcriptome.txt')
-        np.savetxt('full_transcriptomeV2.txt', list(results_pred.values()[0])
+        np.savetxt('full_transcriptomeV2.txt', list(results_pred.values()[0]))
         files.download('full_transcriptomeV2.txt')
         if self.config['uncertainty']:
             self.saved_logvar_sum.update(results_logvar_sum)
