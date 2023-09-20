@@ -260,6 +260,12 @@ class GEARS:
             #f.write(str(results_pred))
         #files.download('full_transcriptome.txt')
         np.savetxt('full_transcriptomeV2.txt', list(results_pred.values())[0])
+        print('Type of results_pred:', type(results_pred))
+        print('Type of value of results_pred:', type(list(results_pred.values())[0]))
+        #tot_exp = 0
+        #for e in list(results_pred.values())[0]:
+            #tot_exp = tot_exp + 
+
         files.download('full_transcriptomeV2.txt')
         if self.config['uncertainty']:
             self.saved_logvar_sum.update(results_logvar_sum)
