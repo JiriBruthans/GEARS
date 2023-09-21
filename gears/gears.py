@@ -313,6 +313,7 @@ class GEARS:
         adata = self.adata
         gene2idx = self.node_map
         cond2name = dict(adata.obs[['condition', 'condition_name']].values)
+        print(cond2name)
         gene_raw2id = dict(zip(adata.var.index.values, adata.var.gene_name.values))
 
         de_idx = [gene2idx[gene_raw2id[i]] for i in
